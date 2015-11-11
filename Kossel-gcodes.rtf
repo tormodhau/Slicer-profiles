@@ -13,31 +13,26 @@ G29 							; Z-probe calibration\
 \
 G1 X0 Y0 Z100 F8000			; Prepare for purging\
 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 M109 S[first_layer_temperature] 	; Wait for extruder temp to set\
+M109 S[first_layer_temperature] 	; Wait for extruder temp to set\
 G92 E0 						; Set the current extruder position as new 0 value\
 G1 E100 F300					; Ensure the filament is all the way through\
 G92 E0						; Set current extruder position as new 0 value\
 \
 G4 S3						; Wait for 3 seconds \
 G1 X0 Y0 Z5 F5000			; Prepare for wiping\
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 G1 X-21.00 Y67.00 Z0.2 F5000 	; Wipe starting position\
+\
+G1 X-21.00 Y67.00 Z0.2 F5000 	; Wipe starting position\
 G92 E0 						; Set the current extruder position as new 0 value\
-G1 E30 F500\
+G1 E30 F300\
 G92 E0\
 G1  X-71.00 Y7.00 Z0.0 F8000 	; Wipe end position\
 \
 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\b \cf0 ENDING CODES:
+\b ENDING CODES:
 \b0 \
 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 G1 X0 Y0 Z220 F8000			; Prepare for retracting the filament\
+G1 X0 Y0 Z220 F8000			; Prepare for retracting the filament\
 \
 G92 E0 						; Set the current extruder position as new 0 value\
 G1 E-100 F500					; Retract filament from hotend\
@@ -45,7 +40,6 @@ G92 E0						; Set current extruder position as new 0 value\
 \
 G28 							; Home printer\
 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 M104 S0 						; Set extruder temperature to 0\
+M104 S0 						; Set extruder temperature to 0\
 M84 						; Disable motors\
 M140 S0 						; Set bed temperature to 0}
