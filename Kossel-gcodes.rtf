@@ -11,14 +11,8 @@ M104 S[first_layer_temperature]	; Set extruder first layer temperature\
 G28 							; Home all axes\
 G29 							; Z-probe calibration\
 \
-G1 X0 Y0 Z5 F5000			; Prepare for wiping\
+G1 X0 Y0 Z10 F5000			; Prepare for printing\
 M109 S[first_layer_temperature] 	; Wait for extruder temp to set\
-\
-G1 X-21.00 Y67.00 Z0.2 F5000 	; Wipe starting position\
-G92 E0 						; Set the current extruder position as new 0 value\
-G1 E25 F200					; Purge\
-G92 E0						; Reset extruder position counter\
-G1  X-71.00 Y7.00 Z0.0 F8000 	; Wipe end position\
 \
 \
 
