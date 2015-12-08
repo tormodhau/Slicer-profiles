@@ -16,16 +16,8 @@ M109 S[first_layer_temperature] 	; Wait for extruder temp to set\
 \
 \
 
-\b ENDING CODES:\
-
+\b ENDING CODES:
 \b0 \
-M104 S180 					; Set retraction temperature\
-G1 X0 Y0 Z220 F8000			; Prepare for retracting the filament\
-M109 S180					; Wait for retraction temp to set\
-\
-G92 E0 						; Set the current extruder position as new 0 value\
-G1 E-600 F700				; Retract filament from the hotend\
-G92 E0						; Set current extruder position as new 0 value\
 \
 G28 							; Home printer\
 M140 S0 						; Set bed temperature to 0\
